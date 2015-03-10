@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HTMLWidget 
+name="MyNewWidget v1.3" 
+formatNumber="3" 
+localization="none" 
+creator="musesupplyco.com" 
+defaultWidth="auto" defaultHeight="auto" minWidth="5" maxWidth="10000" minHeight="5" maxHeight="10000" isResizable="true" 
+termsText="&lt;p&gt;MY NEW WIDGET v1.3 :: Engineered and designed by &lt;a href=&quot;http://musesupplyco.com&quot;&gt;The Muse Supply Co.&lt;/a&gt;  || For more information, go to &lt;a href=&quot;http://musesupplyco.com&quot;&gt;our site&lt;/a&gt;. Please report any issues to &lt;a href=&quot;mailto:hello@musesupplyco.com&quot;&gt;hello@musesupplyco.com&lt;/a&gt;.&lt;/p&gt;">
+
+<!-- to insert a URL in the Terms Text:  &lt;a href=&quot;HTTP://MUSESUPPLYCO.COM&quot;&gt;THE MUSE SUPPLY CO&lt;/a&gt; -->
+
+
+<parameters>
+
+  <info label="Brought to you by the happy campers at Muse Supply." linkURL="http://musesupply.com"/>
+  <separator/>
+
+  <file name="img2" label="Back Image Location" filterLabel="Images" fileTypes="*.jpg;*.jpeg;*.png;*.gif" fileRequiredForOutput="true"/>
+
+    <color name="hexColor" label="Hex Color" defaultValue="#000000" formatHexColor="true" supportsNoneColor="true"/>
+    <color name="rgbColor" label="RGB Color" rgbColor="true" defaultValue="0, 0, 0" supportsNoneColor="true"/>
+
+  <info label="Add'l info here."/>
+
+  <text name="myTextBox" label="A Label" defaultValue="The default value" multiline="true"/>
+  <number name="myNumber" label="Number: " defaultValue="1" min="1" max="100" step="1" snap="0.1" digitsPrecision="0"/>
+  <url name="myURL" label="My URL" defaultValue="http://muse.adobe.com/" currentPageOrURL="true"/>
+
+  <list name="myList" label="My List" defaultValue="Second Value">
+    <value name="first" label="First Value" disableOptions="myURL"/>
+    <value name="second" label="Second Value"/>
+    <value name="third" label="Third Value"/>
+  </list>
+
+  <bool name="toggleOption" label="Toggle Option" defaultValue="foo">
+    <trueVal value="foo" disableOptions="myTextBox"/>
+    <falseVal value="bar" disableOptions="myURL"/>
+  </bool>
+  
+  <bool name="toggleOption" label="Toggle Option" defaultValue="foo">
+    <trueVal value="foo">
+      <pageItemHTML>
+        <!--this content will be inserted when this value is true -->
+        <![CDATA[
+  			You set the option to true.
+  			]]>
+  		</pageItemHTML>
+   </trueVal>
+    <falseVal value="bar">
+      <pageItemHTML>
+      <!-- This content will be inserted when this value is false  -->
+        <![CDATA[
+  			Your option was false.
+  			]]>
+      </pageItemHTML>
+    </falseVal>
+  </bool>
+
+
+  <builtIn name="width"/> 
+  <builtIn name="height"/>
+  <builtIn name="itemUID"/>
+  <builtIn name="siteUID"/>
+  <builtIn name="language" supportedLanguages="en,fr,ja,es,de,it,pt,ko,tr,ru,nl,no,sv,fi,da,cs"/>
+  <builtIn name="country"/>
+  <builtIn name="locale" supportedLocales="cs_CZ,da_DK,de_DE,en_GB,en_US,es_ES,fi_FI,fr_FR,it_IT,ja_JP,nb_NO,ru_RU,tr_TR"/>
+
+  <separator/>
+  <info label="For more info, check out the Terms of Use below."/>
+
+</parameters>
+
+<headHTML>
+</headHTML>
+
+<bodyBeginHTML>
+</bodyBeginHTML>
+
+<bodyEndHTML>
+</bodyEndHTML>
+
+<pageItemPosterHTML>
+<![CDATA[
+  <div>
+  <img width="50" height="50" title="" alt="" src="data:image/png;base64,..." />
+  </div>
+]]>
+</pageItemPosterHTML>
+
+<pageItemHTML>
+<![CDATA[
+
+<!-- This __________________ widget was engineered and designed by the team at MuseSupplyCo.com. -->
+
+<div></div>
+]]>
+</pageItemHTML>
+
+
+</HTMLWidget>
